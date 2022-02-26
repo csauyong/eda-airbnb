@@ -280,13 +280,6 @@ airbnb.groupby('neighbourhood_group').var()['price'].plot.bar(title='Price Varia
 ```
 
 
-
-
-    <AxesSubplot:title={'center':'Price Variation in Neighbourhood Groups'}, xlabel='neighbourhood_group'>
-
-
-
-
 ![png](airbnb_files/airbnb_16_1.png)
 
 
@@ -313,13 +306,6 @@ sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns)
 ```
 
 
-
-
-    <AxesSubplot:>
-
-
-
-
 ![png](airbnb_files/airbnb_21_1.png)
 
 
@@ -333,18 +319,6 @@ plt.figure(figsize=(12, 9), dpi=80)
 sns.scatterplot('latitude', 'longitude', data=airbnb, hue='neighbourhood_group').set(title='Neighbourhood Group')
 ```
 
-    C:\Users\AU YONG Chun Sang\miniconda3\lib\site-packages\seaborn\_decorators.py:36: FutureWarning: Pass the following variables as keyword args: x, y. From version 0.12, the only valid positional argument will be `data`, and passing other arguments without an explicit keyword will result in an error or misinterpretation.
-      warnings.warn(
-    
-
-
-
-
-    [Text(0.5, 1.0, 'Neighbourhood Group')]
-
-
-
-
 ![png](airbnb_files/airbnb_24_2.png)
 
 
@@ -353,17 +327,6 @@ sns.scatterplot('latitude', 'longitude', data=airbnb, hue='neighbourhood_group')
 plt.figure(figsize=(12, 9), dpi=80)
 sns.scatterplot('latitude', 'longitude', data=airbnb, hue='price', hue_norm=(0, 100), legend=False).set(title='Price')
 ```
-
-    C:\Users\AU YONG Chun Sang\miniconda3\lib\site-packages\seaborn\_decorators.py:36: FutureWarning: Pass the following variables as keyword args: x, y. From version 0.12, the only valid positional argument will be `data`, and passing other arguments without an explicit keyword will result in an error or misinterpretation.
-      warnings.warn(
-    
-
-
-
-
-    [Text(0.5, 1.0, 'Price')]
-
-
 
 
 ![png](airbnb_files/airbnb_25_2.png)
@@ -389,13 +352,6 @@ plt.axis("off")
 ```
 
 
-
-
-    (-0.5, 799.5, 799.5, -0.5)
-
-
-
-
 ![png](airbnb_files/airbnb_28_1.png)
 
 
@@ -410,14 +366,6 @@ corr = airbnb[['room_type', 'price', 'minimum_nights', 'number_of_reviews', 'rev
 # plot the heatmap
 sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns)
 ```
-
-
-
-
-    <AxesSubplot:>
-
-
-
 
 ![png](airbnb_files/airbnb_31_1.png)
 
@@ -454,13 +402,6 @@ airbnb.groupby('room_type').mean()['price'].plot.bar(title='Price')
 ```
 
 
-
-
-    <AxesSubplot:title={'center':'Price'}, xlabel='room_type'>
-
-
-
-
 ![png](airbnb_files/airbnb_37_1.png)
 
 
@@ -492,14 +433,6 @@ for ng in groups:
 count = pd.DataFrame({'Entire home/apt': entire_count, 'Private room': private_count, 'Shared room': shared_count}, index=groups)
 count.plot.bar(title='Room Types in Neighbourhoods')
 ```
-
-
-
-
-    <AxesSubplot:title={'center':'Room Types in Neighbourhoods'}>
-
-
-
 
 ![png](airbnb_files/airbnb_40_1.png)
 
